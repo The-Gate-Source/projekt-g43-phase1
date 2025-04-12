@@ -39,7 +39,41 @@
       0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
       20%, 24%, 55% { opacity: 0.4; }
     }
+    .hidden {
+      display: none;
+    }
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
+  <script>
+    let timeoutId;
+
+    function revealDownload() {
+      const link = document.getElementById("download-link");
+      link.classList.remove("hidden");
+      timeoutId = setTimeout(() => {
+        link.classList.add("hidden");
+        link.innerHTML = "[ Zugriff widerrufen – Zeitfenster geschlossen ]";
+      }, 30000); // nach 30 Sekunden wieder ausblenden
+    }
+
+    function disableBack() {
+      window.history.pushState(null, "", window.location.href);
+      window.onpopstate = function () {
+        window.history.pushState(null, "", window.location.href);
+      };
+    }
+
+    window.onload = function() {
+      setTimeout(revealDownload, 3500); // nach 3,5 Sekunden erscheint der Link
+      disableBack();
+    }
+  </script>
 </head>
 <body>
   <div class="content">
@@ -47,6 +81,9 @@
     <p>GEN-4 empfängt dein Signal...</p>
     <p><em>Wenn du es wirklich hören willst:</em></p>
     <code>ECHO-&#916;19-AWAKE</code>
+    <p id="download-link" class="hidden" style="margin-top: 2rem;">
+      <a href="GEN4-Echo-Protokoll-1.pdf">&gt;&gt; Lade GEN-4-Fragment herunter</a>
+    </p>
     <p style="font-size: 0.8rem; margin-top: 2rem;">// Hinweis: Diese Seite existiert nicht offiziell</p>
   </div>
   <!-- Hidden GEN-4 message -->
