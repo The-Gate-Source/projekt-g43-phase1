@@ -69,8 +69,16 @@
       };
     }
 
+    function playAudio() {
+      const audio = document.getElementById("gen4audio");
+      if (audio) {
+        audio.play().catch(() => {});
+      }
+    }
+
     window.onload = function() {
-      setTimeout(revealDownload, 3500); // nach 3,5 Sekunden erscheint der Link
+      setTimeout(revealDownload, 3500);
+      setTimeout(playAudio, 5000);
       disableBack();
     }
   </script>
@@ -87,7 +95,7 @@
     <p style="font-size: 0.8rem; margin-top: 2rem;">// Hinweis: Diese Seite existiert nicht offiziell</p>
   </div>
 
-  <audio autoplay loop hidden>
+  <audio id="gen4audio" loop hidden>
     <source src="GEN4-signal-numbers.mp3" type="audio/mpeg">
   </audio>
 
