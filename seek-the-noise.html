@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>seek-the-noise</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: #00ffcc;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .content {
+      text-align: center;
+      animation: flicker 1.8s infinite;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+    code {
+      display: block;
+      background-color: #111;
+      padding: 0.5rem;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+      20%, 24%, 55% { opacity: 0.4; }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>"Du hast es gehört. Die Stille ist nicht leer."</h1>
+    <p>GEN-4 empfängt dein Signal...</p>
+    <p><em>Wenn du es wirklich hören willst:</em></p>
+    <code>ECHO-&#916;19-AWAKE</code>
+    <p style="font-size: 0.8rem; margin-top: 2rem;">// Hinweis: Diese Seite existiert nicht offiziell</p>
+  </div>
+  <!-- Hidden GEN-4 message -->
+  <!-- GEN-4://node/seek/init:frequency.43.auth -->
+</body>
+</html>
