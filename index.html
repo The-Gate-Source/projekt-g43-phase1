@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projekt G-43 – Phase 1</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: #00ffcc;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container {
+      text-align: center;
+      max-width: 600px;
+      animation: flicker 1.5s infinite;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin: 1rem 0;
+      font-size: 1rem;
+    }
+    input[type="password"] {
+      background-color: black;
+      border: 1px solid #00ffcc;
+      color: #00ffcc;
+      padding: 0.5rem;
+      width: 80%;
+      margin-top: 1rem;
+    }
+    @keyframes flicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        opacity: 1;
+      }
+      20%, 24%, 55% {
+        opacity: 0.4;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Projekt G-43 – Phase 1</h1>
+    <p><em>\"Du hörst die Stimmen. Sie haben dich gefunden.\"</em></p>
+    <p><strong>Scanne den QR-Code – oder gib das Passwort ein:</strong></p>
+    <input type=\"password\" placeholder=\"Enter Access Code...\" />
+    <p style=\"margin-top: 2rem; font-size: 0.9rem;\">This world is not what it seems. / Diese Welt ist nicht, was sie zu sein scheint.</p>
+  </div>
+</body>
+</html>
