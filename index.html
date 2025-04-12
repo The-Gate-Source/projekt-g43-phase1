@@ -38,6 +38,13 @@
       width: 80%;
       margin-top: 1rem;
     }
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
     @keyframes flicker {
       0%, 18%, 22%, 25%, 53%, 57%, 100% {
         opacity: 1;
@@ -47,14 +54,27 @@
       }
     }
   </style>
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("access").value.trim().toUpperCase();
+      if (input === "RAUSCHEN_43") {
+        window.location.href = "seek-the-noise.html";
+      } else {
+        alert("Falscher Zugangscode.");
+      }
+    }
+  </script>
 </head>
 <body>
   <div class="container">
     <h1>🔐 Projekt G-43 – Phase 1</h1>
-    <p><em>\"Du hörst die Stimmen. Sie haben dich gefunden.\"</em></p>
-    <p><strong>Scanne den QR-Code – oder gib das Passwort ein:</strong></p>
-    <input type=\"password\" placeholder=\"Enter Access Code...\" />
-    <p style=\"margin-top: 2rem; font-size: 0.9rem;\">This world is not what it seems. / Diese Welt ist nicht, was sie zu sein scheint.</p>
+    <p><em>"Du hörst die Stimmen. Sie haben dich gefunden."</em></p>
+    <p><strong>Gib den Zugangscode ein:</strong></p>
+    <input type="password" id="access" placeholder="Enter Access Code..." />
+    <br />
+    <button onclick="checkPassword()" style="margin-top: 1rem; background:black; border:1px solid #00ffcc; color:#00ffcc; padding:0.5rem 1rem; cursor:pointer;">Öffnen</button>
+    <p style="margin-top: 2rem; font-size: 0.9rem;">This world is not what it seems. / Diese Welt ist nicht, was sie zu sein scheint.</p>
+    <p style="margin-top: 2rem; font-size: 0.9rem;"><a href="GEN4-Echo-Protokoll-1.pdf">&gt;&gt; Öffne Übertragungsfragment (GEN-4)</a></p>
   </div>
 </body>
 </html>
