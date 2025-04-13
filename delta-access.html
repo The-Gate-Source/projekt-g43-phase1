@@ -52,6 +52,14 @@
       }
     }
   </style>
+  <script>
+    function playDelta() {
+      const audio = document.getElementById("deltaAudio");
+      if (audio) {
+        audio.play().catch(() => {});
+      }
+    }
+  </script>
 </head>
 <body>
   <div class="content">
@@ -61,6 +69,9 @@
     <code>ARCHIVE.RED.NODE-2</code>
     <p><a href="GEN4-Archiv-Protokoll-2.pdf">&gt;&gt; Zugriff auf Protokoll 2</a></p>
     <p style="margin-top: 2rem; font-size: 0.8rem;">// Dieses Archiv wurde isoliert seit: [43.19.∆]</p>
+    <p style="margin-top: 2rem;">
+      <a href="#" onclick="playDelta()">[ Verbindung reaktivieren ]</a>
+    </p>
   </div>
 
   <audio id="deltaAudio" autoplay loop hidden>
